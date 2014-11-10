@@ -1,19 +1,19 @@
 package Factory;
 
-import Factory.ShapeFactory.ShapeType;
+import Factory.ListWidgetFactory.ListWidgetType;
 
 public class FactoryDemo {
 
 	public static void main(String[] args) {
-		ShapeFactory shapeFactory = new ShapeFactory();
+		ListWidgetFactory listWidgetFactory = new ListWidgetFactory();
 		
-		Shape circle = shapeFactory.getShape(ShapeType.CIRCLE);
-		circle.draw();
+		ListWidget companies = listWidgetFactory.getListWidget(ListWidgetType.COMPANIES);
+		companies.render();
 		
-		Shape rectangle = shapeFactory.getShape(ShapeType.RECTANGLE);
-		rectangle.draw();
+		ListWidget expenses = listWidgetFactory.getListWidget(ListWidgetType.EXPENSES);
+		expenses.render();
 		
-		Shape square = shapeFactory.getShape(ShapeType.SQUARE);
-		square.draw();
+		ListWidget actions = listWidgetFactory.getListWidget(ListWidgetType.ACTIONS);
+		actions.render();
 	}
 }
