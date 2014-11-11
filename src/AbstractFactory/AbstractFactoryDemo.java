@@ -22,12 +22,12 @@ public class AbstractFactoryDemo {
 		AbstractFactory adWIdgetFactory = FactoryProducer.getFactory(FactoryType.AD);
 		
 		AdWidget textAd = adWIdgetFactory.getAdWidget(AdWidgetType.TEXT);
-		textAd.render();
+		textAd.update();
 		
 		AdWidget pictureAd = adWIdgetFactory.getAdWidget(AdWidgetType.PICTURE);
-		pictureAd.render();
+		pictureAd.update();
 		
 		AdWidget hybridAd = adWIdgetFactory.getAdWidget(AdWidgetType.HYBRID);
-		hybridAd.render();
+		hybridAd.update();
 	}
 }
