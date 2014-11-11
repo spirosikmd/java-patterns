@@ -1,33 +1,33 @@
 package AbstractFactory;
 
 import AbstractFactory.FactoryProducer.FactoryType;
-import AbstractFactory.ShapeFactory.ShapeType;
-import AbstractFactory.ColorFactory.ColorType;
+import AbstractFactory.ListWidgetFactory.ListWidgetType;
+import AbstractFactory.AdWidgetFactory.AdWidgetType;
 
 public class AbstractFactoryDemo {
 
 	public static void main(String[] args) {
 		
-		AbstractFactory shapeFactory = FactoryProducer.getFactory(FactoryType.SHAPE);
+		AbstractFactory listWidgetFactory = FactoryProducer.getFactory(FactoryType.LIST);
 		
-		Shape rectangle = shapeFactory.getShape(ShapeType.RECTANGLE);
-		rectangle.draw();
+		ListWidget actions = listWidgetFactory.getListWidget(ListWidgetType.ACTIONS);
+		actions.render();
 		
-		Shape circle = shapeFactory.getShape(ShapeType.CIRCLE);
-		circle.draw();
+		ListWidget companies = listWidgetFactory.getListWidget(ListWidgetType.COMPANIES);
+		companies.render();
 		
-		Shape square = shapeFactory.getShape(ShapeType.SQUARE);
-		square.draw();
+		ListWidget expenses = listWidgetFactory.getListWidget(ListWidgetType.EXPENSES);
+		expenses.render();
 		
-		AbstractFactory colorFactory = FactoryProducer.getFactory(FactoryType.COLOR);
+		AbstractFactory adWIdgetFactory = FactoryProducer.getFactory(FactoryType.AD);
 		
-		Color red = colorFactory.getColor(ColorType.RED);
-		red.fill();
+		AdWidget textAd = adWIdgetFactory.getAdWidget(AdWidgetType.TEXT);
+		textAd.render();
 		
-		Color green = colorFactory.getColor(ColorType.GREEN);
-		green.fill();
+		AdWidget pictureAd = adWIdgetFactory.getAdWidget(AdWidgetType.PICTURE);
+		pictureAd.render();
 		
-		Color blue = colorFactory.getColor(ColorType.BLUE);
-		blue.fill();
+		AdWidget hybridAd = adWIdgetFactory.getAdWidget(AdWidgetType.HYBRID);
+		hybridAd.render();
 	}
 }

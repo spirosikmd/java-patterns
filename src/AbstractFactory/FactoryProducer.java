@@ -3,7 +3,7 @@ package AbstractFactory;
 public class FactoryProducer {
 	
 	public enum FactoryType {
-		SHAPE, COLOR
+		LIST, AD
 	}
 	
 	public static AbstractFactory getFactory(FactoryType factoryType) {
@@ -11,10 +11,10 @@ public class FactoryProducer {
 			return null;
 		}
 		switch (factoryType) {
-		case SHAPE:
-			return new ShapeFactory();
-		case COLOR:
-			return new ColorFactory();
+		case LIST:
+			return new ListWidgetFactory();
+		case AD:
+			return new AdWidgetFactory();
 		}
 		return null;
 	}

@@ -1,9 +1,9 @@
 package AbstractFactory;
 
-import AbstractFactory.ColorFactory.ColorType;
-import AbstractFactory.ShapeFactory.ShapeType;
+import AbstractFactory.AdWidgetFactory.AdWidgetType;
+import AbstractFactory.ListWidgetFactory.ListWidgetType;
 
 public abstract class AbstractFactory {
-	abstract Shape getShape(ShapeType shapeType);
-	abstract Color getColor(ColorType colorType);
+	abstract ListWidget getListWidget(ListWidgetType listWidgetType);
+	abstract AdWidget getAdWidget(AdWidgetType adWidgetType);
 }
